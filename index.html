@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<title>吃貨地圖</title>
-		<meta name="description"content="2015camp">
-		<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="http://sdk.sitcon.camp/facebook-sdk.js"></script>
-		<style type="text/css">
-			#fxxk{
-				position: relative;
-				top: -217px;
-			}
-		</style>
-<link rel="shortcut icon" href="favicon.ico">
-
-						<script type="text/javascript">
-						$.ajax({
-							url:'http://maps.googleapis.com/maps/api/geocode/json',
-							type:'GET',
-							dataType:'json',
-							data:{
-								address:"聖約翰科技大學"
-							},
-
-							}
-						});
-						</script>
+	<title>eater_food_map</title>
+	<meta http-equiv="Content-Type" content="test/html" charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="FM.css"/>
+	<link rel="shortcut icon" href="favicon.ico">
+	<script type="text/javascript" src="name.js"></script>
+	<style type="text/css">
+  	#beauty:hover{
+  		cursor: pointer;
+  	}
+  </style>
 </head>
 <body>
-	<div>魷魚隔壁賣珍奶好惹</div>
-	<div style="height:450px;">
-		<a href="http://ext.pimg.tw/mingyuanwc003/1350671870-2048372348.jpg?v=1350671871">
-		<img id="fxxk" src="http://ext.pimg.tw/mingyuanwc003/1350671870-2048372348.jpg?v=1350671871"width="600" height="450" frameborder="0" style="border:0" ></a>
+	<div id="header"><img src="favicon.ico" width="60px" height="60px"/>  吃貨地圖  <img src="favicon.ico" width="60px" height="60px"/></div>
+	
+	<div id="main">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9911522147836!2d121.44516739999999!3d25.169776600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55874b05d3b%3A0x475297414e529c47!2zMjUx5paw5YyX5biC5reh5rC05Y2A6Iux5bCI6LevMjHlt7c56Jmf!5e0!3m2!1szh-TW!2stw!4v1437569555022" width="1104" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	
 
-		<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1804.6506135934437!2d121.44944399999996!3d25.226777300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b08117033f91%3A0xbae376e62bc34435!2z6IGW57SE57-w56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1437530775061" width="600" height="450" frameborder="0" style="border:0" ></iframe>
+	<div id="nav">
+		<select id="test">
+  		</select>
+  		<div id="beauty"><button id="beauty"  onclick = "click" >Submit</button>
 	</div>
-	<div>要買幾杯???
+  	</div>
+  		
 	
-		<input type="number" id="cup">
-		<button onclick="total()">確定</button>
-	</div>
-	<div>友站連結:炸魷魚</div>
-	<a href="http://earlesscat.github.io/fried_squid/">
-		<img src="http://soupedumarche.com/wp-content/uploads/2013/03/ikaring-624x468.jpg"></a>
+	<div id="footer"></div>
 	
-<script type="text/javascript">
-		
-		var name = "tea";
-		
-			function total(){
-			var to=50*document.getElementById("cup").value;
-			alert(to+"元!!!");
-		}
-		alert("珍奶一杯賣50元.");
-		</script>
+	<!-- 下拉式選單-->
+
+  		<script type="text/javascript">
+    		var sel=document.getElementsByTagName("select")[0];
+
+    		
+
+    		for(var i in ne){
+      			var newTag = document.createElement("option");
+      			newTag.innerHTML=ne[i];
+      			sel.appendChild(newTag);
+   			 }
+  		</script>	
+
+	<script type="text/javascript">
+
+	  function click()
+	   {
+	   	for (var i = 0; i < 28 ; i++) {
+	   		if(sel[i].selected)
+	   		 	{	
+	   		  		var box = document.getElementById("main");
+	   		  		box.innerHTML = '<iframe src="'+sr[i]+'" width="1104" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>';
+	   			};
+	   	};
+	   }
+	
+	</script>
+	
+
+
+  
 </body>
 </html>
