@@ -5,24 +5,55 @@
 		<meta name="description"content="2015camp">
 		<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="http://sdk.sitcon.camp/facebook-sdk.js"></script>
+		<style type="text/css">
+			#fxxk{
+				position: relative;
+				top: -217px;
+			}
+		</style>
+<link rel="shortcut icon" href="favicon.ico">
 
+						<script type="text/javascript">
+						$.ajax({
+							url:'http://maps.googleapis.com/maps/api/geocode/json',
+							type:'GET',
+							dataType:'json',
+							data:{
+								address:"聖約翰科技大學"
+							},
+
+							}
+						});
+						</script>
 </head>
 <body>
 	<div>魷魚隔壁賣珍奶好惹</div>
-	<a href="http://ext.pimg.tw/mingyuanwc003/1350671870-2048372348.jpg?v=1350671871">
-<img src="http://ext.pimg.tw/mingyuanwc003/1350671870-2048372348.jpg?v=1350671871"></a>
+	<div style="height:450px;">
+		<a href="http://ext.pimg.tw/mingyuanwc003/1350671870-2048372348.jpg?v=1350671871">
+		<img id="fxxk" src="http://ext.pimg.tw/mingyuanwc003/1350671870-2048372348.jpg?v=1350671871"width="600" height="450" frameborder="0" style="border:0" ></a>
+
+		<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1804.6506135934437!2d121.44944399999996!3d25.226777300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b08117033f91%3A0xbae376e62bc34435!2z6IGW57SE57-w56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1437530775061" width="600" height="450" frameborder="0" style="border:0" ></iframe>
+	</div>
 	<div>要買幾杯???
-		<select>
-		<option>1</option>
-		<option>5</option>
-		<option>10</option>
-		</select>
-		<input type="button" value="確定">
+	
+		<input type="number" id="cup">
+		<button onclick="total()">確定</button>
 	</div>
 	<div>友站連結:炸魷魚</div>
-	<a href="http://soupedumarche.com/wp-content/uploads/2013/03/ikaring-624x468.jpg">
-<img src="http://soupedumarche.com/wp-content/uploads/2013/03/ikaring-624x468.jpg"></a>
+	<a href="http://earlesscat.github.io/fried_squid/">
+		<img src="http://soupedumarche.com/wp-content/uploads/2013/03/ikaring-624x468.jpg"></a>
 	
-
+<script type="text/javascript">
+		
+		var name = "tea";
+		
+			function total(){
+			var to=50*document.getElementById("cup").value;
+			alert(to+"元!!!");
+		}
+		alert("珍奶一杯賣50元.");
+		</script>
 </body>
 </html>
