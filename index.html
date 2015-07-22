@@ -1,66 +1,127 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-	<title>eater_food_map</title>
-	<meta http-equiv="Content-Type" content="test/html" charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="FM.css"/>
-	<link rel="shortcut icon" href="favicon.ico">
-	<script type="text/javascript" src="name.js"></script>
-	<style type="text/css">
-  	#beauty:hover{
-  		cursor: pointer;
-  	}
+
+        <title>eater_food_map</title>
+
+        <meta http-equiv="Content-Type" content="test/html" charset="utf-8"/>
+
+        <link rel="stylesheet" type="text/css" href="FM.css"/>
+
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <script type="text/javascript" src="name.js"></script>
+
+        <style type="text/css">
+
+        #beauty:hover{
+
+                cursor: pointer;
+
+        }
+
   </style>
+
 </head>
+
 <body>
-	<div id="header"><img src="favicon.ico" width="60px" height="60px"/>  吃貨地圖  <img src="favicon.ico" width="60px" height="60px"/></div>
-	
-	<div id="main">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9911522147836!2d121.44516739999999!3d25.169776600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55874b05d3b%3A0x475297414e529c47!2zMjUx5paw5YyX5biC5reh5rC05Y2A6Iux5bCI6LevMjHlt7c56Jmf!5e0!3m2!1szh-TW!2stw!4v1437569555022" width="1104" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-	</div>
-	
 
-	<div id="nav">
-		<select id="test">
-  		</select>
-  		<div id="beauty"><button id="beauty"  onclick = "click" >Submit</button>
-	</div>
-  	</div>
-  		
-	
-	<div id="footer"></div>
-	
-	<!-- 下拉式選單-->
+        <div id="header"><img src="favicon.ico" width="60px" height="60px"/>  吃貨地圖  <img src="favicon.ico" width="60px" height="60px"/></div>
 
-  		<script type="text/javascript">
-    		var sel=document.getElementsByTagName("select")[0];
+       
 
-    		
+        <div id="main">
 
-    		for(var i in ne){
-      			var newTag = document.createElement("option");
-      			newTag.innerHTML=ne[i];
-      			sel.appendChild(newTag);
-   			 }
-  		</script>	
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9911522147836!2d121.44516739999999!3d25.169776600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55874b05d3b%3A0x475297414e529c47!2zMjUx5paw5YyX5biC5reh5rC05Y2A6Iux5bCI6LevMjHlt7c56Jmf!5e0!3m2!1szh-TW!2stw!4v1437569555022" width="1104" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-	<script type="text/javascript">
+        </div>
 
-	  function click()
-	   {
-	   	for (var i = 0; i < 28 ; i++) {
-	   		if(sel[i].selected)
-	   		 	{	
-	   		  		var box = document.getElementById("main");
-	   		  		box.innerHTML = '<iframe src="'+sr[i]+'" width="1104" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>';
-	   			};
-	   	};
-	   }
-	
-	</script>
-	
+       
 
+ 
 
-  
+        <div id="nav">
+
+                <select id="test">
+
+                </select>
+
+                <div id="beauty"><button  onclick = "click1()" >Submit</button>
+
+        </div>
+
+        </div>
+
+               
+
+       
+
+        <div id="footer">由六小出品，版權請洽淡吃寶與估狗</div>
+
+       
+
+        <!-- 下拉式選單-->
+
+ 
+
+                <script>
+
+                var sel=document.getElementsByTagName("select")[0];
+
+ 
+
+               
+
+ 
+
+                for(var i in ne){
+
+                        var newTag = document.createElement("option");
+
+                        newTag.innerHTML=ne[i];
+
+                        sel.appendChild(newTag);
+
+                         }
+
+               
+
+          function click1()
+
+           {
+
+           
+
+                for (var i = 0; i < 28 ; i++) {
+
+                        if(sel[i].selected)
+
+                                {      
+
+                                        var box = document.getElementById("main");
+
+                                        box.innerHTML = '<iframe src="'+sr[i]+'" width="1104" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>';
+
+                                }
+
+                }
+
+           }
+
+       
+
+        </script>
+
+       
+
+ 
+
+ 
+
+ 
+
 </body>
+
 </html>
